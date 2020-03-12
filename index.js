@@ -24,7 +24,7 @@ const main = async() => {
 
     const list = [];
 
-    for (let i = 1; i < 100001; i++) {
+    for (let i = 1; i < 100002; i++) {
         list.push(i);
     }
 
