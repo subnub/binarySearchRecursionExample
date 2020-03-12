@@ -24,7 +24,7 @@ const main = async() => {
 
     const list = [];
 
-    for (let i = 1; i < 100002; i++) {
+    for (let i = 1; i < 100001; i++) {
         list.push(i);
     }
 
@@ -36,7 +36,7 @@ const main = async() => {
         'They are found, and see how many iterations it took.'
     })
 
-    const {passed, iterations} = binarySearchRecusionProject(list, search.value, 0, list.length -1);
+    const {passed, iterations} = binarySearchRecusionProject(list, search.value, 0, list.length);
 
     if (passed) {
 
