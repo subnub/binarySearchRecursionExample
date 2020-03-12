@@ -1,3 +1,5 @@
+const prompts = require("prompts");
+
 const binarySearchRecusionProject = (array, value, start, end, iterations = 0) => {
 
     if (start >= end) return {passed: false, iterations: iterations + 1}
@@ -33,6 +35,17 @@ const main = async() => {
         'Search for values that are, or are not located in the array, to see if \n' +
         'They are found, and see how many iterations it took.'
     })
+
+    const {passed, iterations} = binarySearchRecusionProject(list, search.value, 0, list.length -1);
+
+    if (passed) {
+
+        console.log(`Value ${search.value} found! Took ${iterations} Iterations.`)
+
+    } else {
+
+        console.log(`Value ${search.value} not found! Took ${iterations} Iterations.`)
+    }
 }
 
 main();
